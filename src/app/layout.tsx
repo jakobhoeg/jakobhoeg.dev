@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={GeistSans.className}>
+        <ThemeProvider 
+        attribute="class"
+        defaultTheme="dark">
+        {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
