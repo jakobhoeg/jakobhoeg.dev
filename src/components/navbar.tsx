@@ -20,8 +20,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="text-xs border gap-2 sm:gap-8 md:text-sm bg-muted/10 dark:bg-muted/50 border-zinc-900 border-opacity-5 dark:border-white/5 backdrop-blur flex justify-between items-center px-7 py-4 rounded-full ">
-      <Link href="/" className="flex-shrink-0">
+    <nav className="fixed inset-x-4 top-5 mx-auto flex max-w-2xl overflow-hidden border gap-2 sm:gap-8 text-sm bg-muted/10 dark:bg-muted/50 border-zinc-900 border-opacity-5 dark:border-white/5 backdrop-blur justify-between items-center px-7 py-4 rounded-full ">
+      <ul className="flex items-center/50 items-center ">
+      <Link href="/" className="flex-shrink-0 pr-4">
         <Image
           src="/assets/logo.svg"
           alt="logo"
@@ -30,7 +31,6 @@ export default function Navbar() {
           className="dark:invert cursor-hover"
         />
       </Link>
-      <ul className="flex items-center/50 items-center ">
         {menuList.map((item, idx: number) => {
           const isActive = pathname === item.href;
 
@@ -41,10 +41,10 @@ export default function Navbar() {
 
                 {isActive && (
                   <motion.span
-                    className="absolute inset-x-0 inset-y-0 z-[-1] hidden rounded-full bg-neutral-200/50 dark:bg-neutral-700 sm:flex"
+                    className="absolute inset-x-0 inset-y-0 z-[-1] rounded-full bg-neutral-200/50 dark:bg-neutral-700 flex"
                     layoutId="bubble"
                     style={{ borderRadius: 9999 }}
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: "spring", bounce: 0.35, duration: 0.6 }}
                   />
                 )}
               </Link>
