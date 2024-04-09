@@ -18,9 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <div className="flex min-h-screen flex-col items-center py-12 ">
+          <div className="h-[calc(100dvh)] container flex max-w-2xl flex-col pt-8">
             <Navbar />
-            <main className="flex flex-1 flex-col">
+            <main className="flex flex-1 flex-col pb-20 pt-40 md:pt-48">
               {children}
             </main>
           </div>
