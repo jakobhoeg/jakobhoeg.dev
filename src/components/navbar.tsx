@@ -7,6 +7,7 @@ import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const menuList = [
@@ -39,7 +40,12 @@ export default function Navbar() {
                 <span>{item.name}</span>
 
                 {isActive && (
-                  <span className="absolute inset-x-0 inset-y-0 z-[-1] hidden rounded-full bg-neutral-200/50 dark:bg-neutral-700 sm:flex" />
+                  <motion.span
+                    className="absolute inset-x-0 inset-y-0 z-[-1] hidden rounded-full bg-neutral-200/50 dark:bg-neutral-700 sm:flex"
+                    layoutId="bubble"
+                    style={{ borderRadius: 9999 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
                 )}
               </Link>
             </li>
