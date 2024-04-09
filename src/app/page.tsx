@@ -1,11 +1,12 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import Navbar from "@/components/navbar";
-import Image from "next/image";
+import { LocationCard } from "@/components/cards/location";
 
 export default function Home() {
   return (
-    <div className="">
-      
+    <div className="w-full h-full flex flex-col gap-8">
+      <h1>
+        Hello, I'm Jakob 👋
+      </h1>
+      <LocationCard />
     </div>
   );
 }
