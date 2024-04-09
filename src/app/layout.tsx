@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,11 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-        <ThemeProvider 
-        attribute="class"
-        defaultTheme="dark">
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <div className="flex min-h-screen flex-col items-center py-12 ">
+            <Navbar />
+            <main className="flex flex-1 flex-col">
+              {children}
+            </main>
+          </div>
         </ThemeProvider>
+        <div className="bg-[url(/assets/noise-bg.png)] opacity-60 dark:opacity-[0.20] inset-0 pointer-events-none fixed z-[99] h-full w-full overflow-hidden" />
       </body>
     </html>
   );
