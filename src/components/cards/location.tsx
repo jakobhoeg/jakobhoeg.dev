@@ -42,18 +42,18 @@ export function LocationCard() {
          width: width * 2,
          height: width * 2,
          phi: 0,
-         theta: 0.2,
+         theta: 0.4,
          dark: resolvedTheme === "dark" ? 1 : 0,
-         diffuse: 3,
-         mapSamples: 12_000,
-         mapBrightness: 2.5,
+         diffuse: 1.2,
+         mapSamples: 12000,
+         mapBrightness: 4,
          baseColor: resolvedTheme === "dark" ? [0.5, 0.5, 0.5] : [1, 1, 1],
-         markerColor: [0, 0.3, 0.1],
+         markerColor: [0.1, 0.9, 0.3],
          glowColor:
             resolvedTheme === "dark" ? [0.5, 0.5, 0.5] : [0.9, 0.9, 0.9],
          markers: [
             // Kliplev latitute and longitude
-            { location: [54.9372, 9.4033], size: 0.4 },
+            { location: [54.9372, 9.4033], size: 0.2 },
          ],
          scale: 1,
          onRender: (state: any) => {
@@ -80,7 +80,7 @@ export function LocationCard() {
 
    return (
       <motion.div
-         className="card-borde relative flex flex-col h-full gap-6 overflow-hidden rounded-xl bg-white/25 p-4 dark:bg-muted/50 md:col-span-2 md:col-start-6 md:row-span-2 md:row-start-2 md:h-40 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/30 dark:ring-offset-neutral-950/10"
+         className="relative flex flex-col h-full gap-6 col-span-4 col-start-5 row-span-3 row-start-2 overflow-hidden rounded-xl bg-white/25 p-4 dark:bg-muted/50 md:col-span-2 md:col-start-6 md:row-span-2 md:row-start-2 md:h-40 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
       >
          <div className="z-10 flex items-center gap-2">
             <Globe className="w-5 h-5" />

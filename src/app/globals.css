@@ -58,17 +58,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@layer components {
-  .card-border {
-     &::before {
-        @apply pointer-events-none absolute inset-0 rounded-xl content-[''] dark:bg-gradient-to-b dark:from-neutral-200/70 dark:to-neutral-100/20 dark:mix-blend-soft-light;
-        padding: 1px;
-        -webkit-mask:
-           linear-gradient(#fff 0 0) content-box,
-           linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-     }
-  }
-}
