@@ -25,7 +25,7 @@ export default function RootLayout({
             </main>
           </div>
         </ThemeProvider>
-        <div className="bg-[url(/assets/noise-bg.png)] opacity-60 dark:opacity-[0.20] inset-0 pointer-events-none fixed z-[99] h-full w-full overflow-hidden" />
+        <div className="bg-[url(/assets/noise-bg.png)] opacity-60 dark:opacity-[0.15] inset-0 pointer-events-none fixed z-[99] h-full w-full overflow-hidden" />
       </body>
     </html>
   );
