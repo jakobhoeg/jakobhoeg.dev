@@ -1,6 +1,5 @@
-import { LocationCard } from "@/components/cards/location";
+import { GlobeCard } from "@/components/cards/globe";
 import { PersonalCard } from "@/components/cards/personal";
-import { TimeCard } from "@/components/cards/time";
 
 export default function Home() {
   return (
@@ -8,11 +7,10 @@ export default function Home() {
       <h1 className="text-xl">
         Hello, I&apos;m Jakob 👋
       </h1>
-      <div className="mt-8 grid grid-cols-8 grid-rows-5 gap-8 md:gap-6 md:grid-cols-7 md:grid-rows-3">
+      <div className="mt-8 grid grid-cols-8 grid-rows-5 gap-8 md:gap-6 md:grid-cols-6 md:grid-rows-3">
 
       <PersonalCard />
-      <TimeCard />
-      <LocationCard />
+      <GlobeCard />
       </div>
     </div>
   );
