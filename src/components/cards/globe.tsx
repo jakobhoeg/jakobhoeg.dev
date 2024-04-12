@@ -83,7 +83,7 @@ export function GlobeCard() {
   return (
     <motion.div 
     whileHover={{ scale: 1.025 }}
-    className="relative h-full gap-6 overflow-hidden rounded-xl bg-white/90 p-4 dark:bg-muted/80 col-start-5 col-span-3 row-start-2 md:h-40 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
+    className="relative h-full gap-6 overflow-hidden rounded-xl bg-white/90 p-4 dark:bg-muted/80 md:col-span-3 md:col-start-3 md:row-span-1 md:row-start-1 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
       <div className="flex flex-col gap-1">
         <div className="z-10 flex items-center gap-2">
           <GlobeIcon className="w-4 h-4" />

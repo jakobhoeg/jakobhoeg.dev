@@ -1,5 +1,6 @@
 import GithubCard from "@/components/cards/github";
 import { GlobeCard } from "@/components/cards/globe";
+import IconsCard from "@/components/cards/icons";
 import LinkedInCard from "@/components/cards/linkedin";
 import { PersonalCard } from "@/components/cards/personal";
 import ProjectsCard from "@/components/cards/projects";
@@ -15,12 +16,15 @@ export default function Home() {
         An aspiring software developer located in Denmark who loves to create better UX and DX.<br />
         Currently, I am contracting for <Link href="/work" className="font-semibold">Google</Link> and working as a student software developer at Agramkow.
       </p>
-      <div className="mt-2 grid gap-8 grid-cols-7 grid-rows-2 ">
+      <div className="mt-2 grid gap-8 grid-cols-7 grid-rows-2  ">
 
       <PersonalCard />
-      <GithubCard />
+      <div className="flex flex-col gap-8 col-start-3 col-span-2 justify-between">
+        <LinkedInCard />
+        <GithubCard />
+      </div>
       <ProjectsCard />
-      <LinkedInCard />
+      <IconsCard  />
       <GlobeCard />
       </div>
     </div>
