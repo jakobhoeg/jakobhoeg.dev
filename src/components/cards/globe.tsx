@@ -1,12 +1,11 @@
 "use client";
 
 import createGlobe from "cobe";
-import { Globe } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
 import { useSpring } from "react-spring";
 import { motion } from "framer-motion";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { GlobeIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export function GlobeCard() {
   const { resolvedTheme } = useTheme();
@@ -68,7 +67,7 @@ export function GlobeCard() {
         state.phi = phi + r.get();
 
         direction = -1;
-        phi += 0.001;
+        phi += 0.003;
 
         state.width = width * 2;
         state.height = width * 2;
@@ -84,10 +83,10 @@ export function GlobeCard() {
   return (
     <motion.div 
     whileHover={{ scale: 1.025 }}
-    className="relative h-full gap-6 col-span-6 col-start-1 row-span-3 row-start-2 overflow-hidden rounded-xl bg-white/25 p-4 dark:bg-muted/50 md:col-span-4 md:col-start-4 md:row-span-2 md:row-start-2 md:h-40 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
+    className="relative h-full gap-6 overflow-hidden rounded-xl bg-white/90 p-4 dark:bg-muted/80 col-start-5 col-span-3 row-start-2 md:h-40 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
       <div className="flex flex-col gap-1">
         <div className="z-10 flex items-center gap-2">
-          <Globe className="w-4 h-4" />
+          <GlobeIcon className="w-4 h-4" />
           <h2 className="text-sm font-light">Kliplev, Denmark</h2>
         </div>
         <div className="z-10 flex items-center gap-2">
@@ -121,7 +120,7 @@ export function GlobeCard() {
                 pointerInteracting.current = window.setInterval(() => {
                   pointerInteractionMovement.current += 0.01;
                   api.start({ r: pointerInteractionMovement.current });
-                }, 1000 / 60);
+                }, 1600 / 60);
               }}
               onMouseLeave={() => {
                 // Reset the globe rotation when not hovering
