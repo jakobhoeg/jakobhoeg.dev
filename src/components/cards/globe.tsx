@@ -87,7 +87,7 @@ export function GlobeCard() {
       <div className="flex flex-col gap-1">
         <div className="z-10 flex items-center gap-2">
           <GlobeIcon className="w-4 h-4" />
-          <h2 className="text-xs md:text-sm font-light">Kliplev, Denmark</h2>
+          <h2 className="flex text-xs md:text-sm font-light gap-1"><span className="hidden md:flex">Kliplev,</span>Denmark</h2>
         </div>
         <div className="z-10 flex items-center gap-2">
           {time && time.getHours() > 6 && time.getHours() < 18 ? (
