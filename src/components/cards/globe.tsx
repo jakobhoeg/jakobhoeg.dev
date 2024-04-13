@@ -83,11 +83,11 @@ export function GlobeCard() {
   return (
     <motion.div 
     whileHover={{ scale: 1.025 }}
-    className="relative h-full gap-6 overflow-hidden rounded-xl bg-white/90 p-4 dark:bg-muted/80 md:col-span-3 md:col-start-3 md:row-span-1 md:row-start-1 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
+    className="relative h-32 gap-6 md:h-full overflow-hidden rounded-xl bg-white/90 p-4 dark:bg-muted/80 col-start-4 row-start-1 col-span-3 md:col-span-3 md:col-start-3 md:row-span-1 md:row-start-1 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
       <div className="flex flex-col gap-1">
         <div className="z-10 flex items-center gap-2">
           <GlobeIcon className="w-4 h-4" />
-          <h2 className="text-sm font-light">Kliplev, Denmark</h2>
+          <h2 className="text-xs md:text-sm font-light">Kliplev, Denmark</h2>
         </div>
         <div className="z-10 flex items-center gap-2">
           {time && time.getHours() > 6 && time.getHours() < 18 ? (
@@ -105,7 +105,7 @@ export function GlobeCard() {
           </p>
         </div>
       </div>
-      <div className="absolute inset-x-10 bottom-[-80%] mx-auto aspect-square h-[175%]">
+      <div className="absolute -inset-x-10 md:inset-x-10 bottom-[-80%] mx-auto aspect-square h-[175%]">
         <div className="w-full h-full flex">
           <div
             style={{
