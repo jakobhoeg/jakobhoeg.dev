@@ -14,7 +14,7 @@ export default function Home() {
       </h1>
       <p className="max-w-prose">
         An aspiring software developer located in Denmark who loves to create better UX and DX.<br />
-        Currently, I am contracting for <Link href="/work" className="font-semibold">Google</Link> and working as a student software developer at Agramkow.
+        Currently, I am contracting for <Link href="/work" className="font-semibold">Google</Link> and working as a student software developer at <Link href="/work" className="font-semibold">Agramkow</Link>.
       </p>
       <div className="mt-2 grid gap-6 grid-cols-9 md:grid-cols-7 grid-rows-4 md:grid-rows-2  ">
 

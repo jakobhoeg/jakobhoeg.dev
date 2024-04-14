@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
+          <AuroraBackground >
         <ThemeProvider attribute="class" defaultTheme="system">
           <div className="h-[calc(100dvh)] container flex max-w-3xl flex-col pt-8">
             <Navbar />
@@ -25,6 +27,7 @@ export default function RootLayout({
             </main>
           </div>
         </ThemeProvider>
+          </AuroraBackground>
       </body>
     </html>
   );

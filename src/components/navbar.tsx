@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 export default function Navbar() {
   const menuList = [
     { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects", section: "projects" },
+    { name: "Projects", href: "/projects" },
+    { name: "Work", href: "/work" },
     { name: "Blog", href: "/blog" },
-    { name: "About", href: "/about" },
   ];
 
   const pathname = usePathname();
@@ -41,9 +41,8 @@ export default function Navbar() {
 
                 {isActive && (
                   <motion.span
-                    className="absolute inset-x-0 inset-y-0 z-[-1] rounded-full bg-neutral-200/50 dark:bg-neutral-700 flex"
+                    className="absolute inset-x-0 inset-y-0 z-[-1] rounded-full bg-neutral-200/40 dark:bg-neutral-700/60 flex"
                     layoutId="bubble"
-                    style={{ borderRadius: 9999 }}
                     transition={{ type: "spring", bounce: 0.35, duration: 0.6 }}
                   />
                 )}
