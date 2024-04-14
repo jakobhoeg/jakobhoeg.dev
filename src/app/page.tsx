@@ -16,10 +16,10 @@ export default function Home() {
         An aspiring software developer located in Denmark who loves to create better UX and DX.<br />
         Currently, I am contracting for <Link href="/work" className="font-semibold">Google</Link> and working as a student software developer at <Link href="/work" className="font-semibold">Agramkow</Link>.
       </p>
-      <div className="mt-2 grid gap-6 grid-cols-9 md:grid-cols-7 grid-rows-4 md:grid-rows-2  ">
+      <div className="mt-2 grid gap-6 grid-cols-9 md:grid-cols-7 grid-rows-3 md:grid-rows-2  ">
 
       <PersonalCard />
-      <div className="flex md:flex-col gap-6 col-start-5 md:col-start-3 row-start-4 md:row-start-2 col-span-5 md:col-span-2 justify-between">
+      <div className="flex md:flex-col h-20 md:h-full gap-6 col-start-5 md:col-start-3 row-start-3 md:row-start-2 col-span-5 md:col-span-2 justify-between">
         <LinkedInCard />
         <GithubCard />
       </div>
