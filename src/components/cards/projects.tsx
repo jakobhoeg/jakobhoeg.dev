@@ -92,7 +92,7 @@ export default function ProjectsCard() {
                 alt={card.imageAlt}
                 width={1200}
                 height={1200}
-                className="object-cover w-full h-full "
+                className="object-cover w-full h-full [mask-image:_linear-gradient(to_top,transparent_0,_black_64px,_black_calc(100%-64px))] "
               />
             </CarouselItem>
           ))}
