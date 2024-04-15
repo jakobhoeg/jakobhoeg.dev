@@ -26,15 +26,16 @@ export const metadata: Metadata = {
     title: metainfo.name,
     url: metainfo.url,
     description: metainfo.description,
-    images: metainfo.image,
+    images: [metainfo.image],
+    siteName: metainfo.name,
   },
   twitter: {
     card: "summary_large_image",
-    site: "@jakobhoeg",
+    site: metainfo.url,
     creator: "@jakobhoeg",
     title: metainfo.name,
     description: metainfo.description,
-    images: metainfo.image,
+    images: [metainfo.image],
   },
 };
 
