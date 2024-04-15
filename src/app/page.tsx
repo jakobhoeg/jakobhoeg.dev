@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="w-full h-full flex flex-col gap-5">
       <h1 className="text-xl font-medium">
-        Hello, I&apos;m Jakob 👋
+        Hey, I&apos;m Jakob 👋
       </h1>
       <p className="max-w-prose">
         An aspiring software developer located in Denmark who loves to create better UX and DX.<br />
