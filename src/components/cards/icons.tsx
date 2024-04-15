@@ -77,7 +77,7 @@ export default function IconsCard() {
   return (
     <motion.div
       whileHover={{ scale: 1.025 }}
-      className="relative flex justify-center overflow-hidden rounded-xl md:h-40 bg-white/90 p-4 dark:bg-muted/80 col-start-5 col-span-5 md:col-span-2 md:col-start-6 row-start-2 md:row-start-1 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
+      className="relative flex justify-center overflow-hidden rounded-xl md:h-40 bg-white/90 p-4 dark:bg-muted/80 col-start-1 col-span-5 md:col-span-2 md:col-start-6 row-start-3 md:row-start-1 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
     >
         <div className="absolute bottom-3 md:bottom-1.5 md:text-sm z-50 flex justify-center w-3/4 py-1.5 border-t rounded-full bg-white/60 dark:bg-muted/60 border-zinc-900 border-opacity-10 dark:border-white/5 backdrop-blur-sm">
         <p>Favourite tech</p>
