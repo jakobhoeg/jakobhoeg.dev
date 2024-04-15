@@ -6,8 +6,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
@@ -70,7 +68,7 @@ export default function ProjectsCard() {
   return (
     <motion.div
       whileHover={{ scale: 1.025 }}
-      className="relative h-2/3 cursor-pointer overflow-hidden gap-6 md:h-40 flex  rounded-xl bg-white/90 dark:bg-muted/80 col-start-1 row-start-2 row-span-2 col-span-4 md:col-start-5 md:col-span-3 md:row-start-2 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
+      className="relative h-full cursor-pointer overflow-hidden gap-6 md:h-40 flex  rounded-xl bg-white/90 dark:bg-muted/80 col-start-1 row-start-2 row-span-1 col-span-9 md:col-start-5 md:col-span-3 md:row-start-2 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
       onClick={() => router.push("/projects")}
     >
       <Carousel
@@ -92,12 +90,12 @@ export default function ProjectsCard() {
                 alt={card.imageAlt}
                 width={1200}
                 height={1200}
-                className="object-cover w-full h-full "
+                className="object-cover w-full h-full [mask-image:_linear-gradient(to_top,transparent_0,_black_38px,_black_calc(100%-38px))] "
               />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-3 md:bottom-1.5 md:text-sm z-50 flex justify-center w-3/4 py-1.5 border-t rounded-full bg-white/60 dark:bg-muted/60 border-zinc-900 border-opacity-10 dark:border-white/5 backdrop-blur-sm">
+        <div className="absolute bottom-3  md:text-sm z-50 flex justify-center w-3/4 py-1.5 border-t rounded-full bg-white/60 dark:bg-muted/60 border-zinc-900 border-opacity-10 dark:border-white/5 backdrop-blur-sm">
         <p>My projects</p>
         </div>
       </Carousel>

@@ -7,7 +7,7 @@ export function PersonalCard() {
    return (
       <motion.div
       whileHover={{ scale: 1.025 }}
-         className="relative overflow-hidden rounded-xl md:col-start-1 row-start-1 col-span-4 row-span-1 h-64 md:h-full md:col-span-2 md:row-span-2 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
+         className="relative h-full overflow-hidden rounded-xl md:col-start-1 row-start-1 col-span-4 row-span-1 md:h-full md:col-span-2 md:row-span-2 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
       >
          <Image
             alt="Jakob Hoeg Mørk"

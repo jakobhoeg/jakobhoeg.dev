@@ -19,7 +19,7 @@ export default function Home() {
       <div className="mt-2 grid gap-6 grid-cols-9 md:grid-cols-7 grid-rows-3 md:grid-rows-2  ">
 
       <PersonalCard />
-      <div className="flex md:flex-col h-20 md:h-full gap-6 col-start-5 md:col-start-3 row-start-3 md:row-start-2 col-span-5 md:col-span-2 justify-between">
+      <div className="flex flex-col h-full gap-6 col-start-6 md:col-start-3 row-start-3 md:row-start-2 col-span-4 md:col-span-2 justify-between">
         <LinkedInCard />
         <GithubCard />
       </div>
