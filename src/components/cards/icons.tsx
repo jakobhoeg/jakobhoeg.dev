@@ -82,7 +82,7 @@ export default function IconsCard() {
         <div className="absolute bottom-3 md:bottom-1.5 md:text-sm z-50 flex justify-center w-3/4 py-1.5 border-t rounded-full bg-white/60 dark:bg-muted/60 border-zinc-900 border-opacity-10 dark:border-white/5 backdrop-blur-sm">
         <p>Favourite tech</p>
         </div>
-      <motion.div className=" flex-wrap justify-between flex w-full h-full md:gap-2 ">
+      <motion.div className=" flex-wrap justify-between flex w-full h-full sm:gap-2 ">
         {icons.map((icon) => (
           <motion.div
             key={icon.id}
@@ -95,7 +95,7 @@ export default function IconsCard() {
               repeatType: "reverse",
               ease: "easeInOut",
             }}
-            className="relative flex w-12 h-12 sm:w-16 sm:h-16 md:h-10 md:w-10 "
+            className="relative flex w-12 h-12 sm:w-16 sm:h-16 md:h-9 md:w-9 "
           >
             <Image src={icon.iconSrc} alt="icon" fill className="shrink-0 flex" {...icon.invertColor && { className: "dark:invert" }} />
           </motion.div>
