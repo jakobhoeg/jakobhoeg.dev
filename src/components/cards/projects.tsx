@@ -92,12 +92,12 @@ export default function ProjectsCard() {
                 alt={card.imageAlt}
                 width={1200}
                 height={1200}
-                className="object-cover w-full h-full [mask-image:_linear-gradient(to_top,transparent_0,_black_64px,_black_calc(100%-64px))] "
+                className="object-cover w-full h-full [mask-image:_linear-gradient(to_top,transparent_0,_black_38px,_black_calc(100%-38px))] "
               />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-3 md:bottom-1.5 md:text-sm z-50 flex justify-center w-3/4 py-1.5 border-t rounded-full bg-white/60 dark:bg-muted/60 border-zinc-900 border-opacity-10 dark:border-white/5 backdrop-blur-sm">
+        <div className="absolute bottom-3  md:text-sm z-50 flex justify-center w-3/4 py-1.5 border-t rounded-full bg-white/60 dark:bg-muted/60 border-zinc-900 border-opacity-10 dark:border-white/5 backdrop-blur-sm">
         <p>My projects</p>
         </div>
       </Carousel>
