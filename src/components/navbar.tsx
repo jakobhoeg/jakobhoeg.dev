@@ -12,15 +12,15 @@ import { motion } from "framer-motion";
 export default function Navbar() {
   const menuList = [
     { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects" },
     { name: "Work", href: "/work" },
+    { name: "Projects", href: "/projects" },
     { name: "Blog", href: "/blog" },
   ];
 
   const pathname = usePathname();
 
   return (
-    <nav className="fixed inset-x-4 z-[99] top-7 mx-auto flex max-w-3xl overflow-hidden border gap-2 sm:gap-8 text-sm bg-white/25 dark:bg-muted/50 border-zinc-900 border-opacity-5 dark:border-white/5 backdrop-blur justify-between items-center px-7 py-4 rounded-full  ">
+    <nav className="fixed inset-x-4 z-[99] top-7 mx-auto flex max-w-3xl overflow-hidden border gap-2 sm:gap-8 text-sm bg-white/25 dark:bg-muted/50 border-zinc-900 border-opacity-5 dark:border-white/5 backdrop-blur justify-between items-center px-7 py-4 rounded-full  ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10">
       <ul className="flex items-center/50 items-center ">
       <Link href="/" className="flex-shrink-0 pr-4">
         <Image

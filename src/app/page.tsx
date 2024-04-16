@@ -12,7 +12,7 @@ export default function Home() {
       <h1 className="text-xl font-medium">
         Hey, I&apos;m Jakob 👋
       </h1>
-      <p className="max-w-prose">
+      <p>
         An aspiring software developer located in Denmark who loves to create better UX and DX.<br />
         Currently, I am contracting for <Link href="/work" className="font-semibold">Google</Link> and working as a student software developer at <Link href="/work" className="font-semibold">Agramkow</Link>.
       </p>
