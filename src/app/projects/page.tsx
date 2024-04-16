@@ -1,17 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import ProjectCard from "./components/project-card";
-
-interface ProjectCardProps {
-  id: number;
-  title: string;
-  videoUrl?: string;
-  videoAlt?: string;
-  description: string;
-  showcaseUrl?: string;
-  githubUrl?: string;
-  skills: string[];
-}
+import { ProjectCardProps } from "@/lib/types";
 
 export default function ProjectsPage() {
   const Projects: ProjectCardProps[] = [

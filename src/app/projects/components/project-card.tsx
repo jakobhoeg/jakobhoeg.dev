@@ -10,17 +10,7 @@ import { motion } from "framer-motion";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
-
-interface ProjectCardProps {
-  id: number;
-  title: string;
-  videoUrl?: string;
-  videoAlt?: string;
-  description: string;
-  showcaseUrl?: string;
-  githubUrl?: string;
-  skills: string[];
-}
+import { ProjectCardProps } from "@/lib/types";
 
 export default function ProjectCard({
   id,
@@ -57,7 +47,7 @@ export default function ProjectCard({
     <motion.div
       ref={videoRef}
       whileHover={{ scale: 1.025 }}
-      className="relative bg-white/90 dark:bg-muted/80 w-full overflow-hidden rounded-xl ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
+      className="relative bg-white/75 dark:bg-muted/80 w-full overflow-hidden rounded-xl ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
     >
      {load ? (
          <video
@@ -121,7 +111,7 @@ export default function ProjectCard({
             </div>
           </div>
         </div>
-        <p className="pt-2 md:w-96 lg:w-[450px] text-muted-foreground">
+        <p className="pt-2  text-sm text-muted-foreground">
           {description}
         </p>
       </div>
