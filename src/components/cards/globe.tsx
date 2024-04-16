@@ -24,18 +24,18 @@ export function GlobeCard() {
   const [{ r }, api] = useSpring(() => ({
     r: 0,
     config: {
-      mass: 0.5,
-      tension: 200,
-      friction: 20,
+      mass: 10,
+      tension: 400,
+      friction: 100,
       precision: 0.001,
     },
   }));
 
   React.useEffect(() => {
-    let width = 0;
-    let phi = 3;
     let direction = 1;
-
+    let phi = 3.5;
+    let width = 0;
+    
     const onResize = () => {
       if (canvasRef.current && (width = canvasRef.current.offsetWidth)) {
         window.addEventListener("resize", onResize);
@@ -56,7 +56,7 @@ export function GlobeCard() {
       mapSamples: 12000,
       mapBrightness: 4,
       baseColor: resolvedTheme === "dark" ? [0.5, 0.5, 0.5] : [1, 1, 1],
-      markerColor: [0.1, 0.9, 0.3],
+      markerColor: [0.1, 0.75, 0.9],
       glowColor: resolvedTheme === "dark" ? [0.5, 0.5, 0.5] : [0.9, 0.9, 0.9],
       markers: [
         // Kliplev latitute and longitude
