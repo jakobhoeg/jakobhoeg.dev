@@ -9,6 +9,9 @@ const metainfo = {
   name: "Jakob Hoeg Mørk",
   description: "Software developer from Denmark.",
   url: "https://jakobhoeg.dev",
+  icons: {
+    icon: "/assets/logos/favicon-32x32.png"
+  },
   image: "/assets/metaimg.jpg",
 }
 
