@@ -9,10 +9,10 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="flex h-full w-full flex-col gap-5">
-      <h1 className="text-xl font-medium">Hey, I&apos;m Jakob 👋</h1>
-      <p>
-        An aspiring software developer located in Denmark who loves to create
-        better UX and DX.
+      <h1 className="text-xl font-medium">Hey there, curious 👋</h1>
+      <p className="prose dark:prose-invert">
+        I&apos;m an aspiring software developer located in Denmark and I love to
+        create better UX and DX - especially through OSS (Open Source Software).
         <br />
         Currently, I am contracting for{' '}
         <Link href="/work" className="font-semibold">

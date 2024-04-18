@@ -7,7 +7,7 @@ export default function WorkPage() {
   return (
     <div className="flex h-full w-full flex-col gap-5">
       <h1 className="text-xl font-medium">Work experience</h1>
-      <p className="max-w-prose">
+      <p className="prose dark:prose-invert">
         This is a list of my work experience. For more information, please visit
         my{' '}
         <Link
