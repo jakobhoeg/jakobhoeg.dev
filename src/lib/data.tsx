@@ -8,7 +8,7 @@ export const Work: WorkCardProps[] = [
     location: 'California, USA • Remote',
     logoSrc: '/assets/logos/google.png',
     description:
-      "I'm currently contracting fo Google where I've been collaborating on external frameworks with the Google Chrome team. I have helped experiment with AI/LLM model serving, to quickly switch between locally served models (Gemma), browser served models (using WebGPU in conjunction with Gemini) & hosted models (Gemini).",
+      "I'm currently contracting for Google where I've been collaborating on external frameworks with the Google Chrome team. I helped experiment with multi-platform large language model serving, including utilizing local LLMs, browser WebGPU models and hosted/server models.",
     type: 'Contracting',
     timeframe: 'Mar 2024 - Present',
   },
@@ -19,7 +19,7 @@ export const Work: WorkCardProps[] = [
     location: 'Sønderborg, Denmark',
     logoSrc: '/assets/logos/agramkow.jpg',
     description:
-      "I'm currently working as a student software developer at Agramkow. This involves creating in-house software for the compay. This is primarily in C# and .NET.",
+      "I'm currently working as a student software developer at Agramkow. This involves creating internal systems for the company. I mainly work with C# and WPF as well as MSSQL.",
     type: 'Part-time',
     timeframe: 'Mar 2024 - Present',
   },

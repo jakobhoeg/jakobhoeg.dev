@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   return (
     <div className="flex h-full w-full flex-col gap-5">
       <h1 className="text-xl font-medium">Projects I&apos;ve worked on</h1>
-      <p className="max-w-prose">
+      <p className="prose dark:prose-invert">
         This is a list of some of the projects I&apos;ve worked on. You can find
         more on my{' '}
         <Link href="/github" className="font-semibold">
