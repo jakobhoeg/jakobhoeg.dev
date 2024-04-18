@@ -16,7 +16,7 @@ export default function LinkedInCard() {
     className={cn(buttonVariants({ variant: "default" }), 
     'absolute top-0 left-0 h-full w-full gap-2')}
     >
-        <GitHubLogoIcon className='w-5 h-5 shrink-0'/>
+        <GitHubLogoIcon className='w-8 h-8 md:h-5 md:w-5 shrink-0'/>
         <p className='hidden md:flex md:text-sm'>GitHub</p>
     </Link>
    </motion.div>
