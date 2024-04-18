@@ -1,15 +1,15 @@
-import Link from "next/link";
-import React from "react";
-import ProjectCard from "./components/project-card";
-import { Projects } from "@/lib/data";
+import Link from 'next/link';
+import React from 'react';
+import ProjectCard from './components/project-card';
+import { Projects } from '@/lib/data';
 
 export default function ProjectsPage() {
   return (
-    <div className="w-full h-full flex flex-col gap-5">
+    <div className="flex h-full w-full flex-col gap-5">
       <h1 className="text-xl font-medium">Projects I&apos;ve worked on</h1>
       <p className="max-w-prose">
         This is a list of some of the projects I&apos;ve worked on. You can find
-        more on my{" "}
+        more on my{' '}
         <Link href="/github" className="font-semibold">
           GitHub
         </Link>
