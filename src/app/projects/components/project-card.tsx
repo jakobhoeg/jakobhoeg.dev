@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import {
   ExternalLinkIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-} from "@radix-ui/react-icons";
-import { motion } from "framer-motion";
-import { Button, buttonVariants } from "@/components/ui/button";
-import Image from "next/image";
-import { Skeleton } from "@/components/ui/skeleton";
-import { ProjectCardProps } from "@/lib/types";
+} from '@radix-ui/react-icons';
+import { motion } from 'framer-motion';
+import { Button, buttonVariants } from '@/components/ui/button';
+import Image from 'next/image';
+import { Skeleton } from '@/components/ui/skeleton';
+import { ProjectCardProps } from '@/lib/types';
 
 export default function ProjectCard({
   id,
@@ -47,26 +47,26 @@ export default function ProjectCard({
     <motion.div
       ref={videoRef}
       whileHover={{ scale: 1.025 }}
-      className="relative bg-white/75 dark:bg-muted/80 w-full overflow-hidden rounded-xl ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
+      className="relative w-full overflow-hidden rounded-xl bg-white/75 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
     >
-     {load ? (
-         <video
-         autoPlay={false}
-         muted
-         controls
-         title={title}
-         loop
-         playsInline
-         preload="metadata"
-         className="object-cover rounded-xl"
-         src={videoUrl}
-       ></video>
-     ) : (
-        <div className="w-full flex justify-center">
-            <Skeleton className="h-96 w-full rounded-xl" />
+      {load ? (
+        <video
+          autoPlay={false}
+          muted
+          controls
+          title={title}
+          loop
+          playsInline
+          preload="metadata"
+          className="rounded-xl object-cover"
+          src={videoUrl}
+        ></video>
+      ) : (
+        <div className="flex w-full justify-center">
+          <Skeleton className="h-96 w-full rounded-xl" />
         </div>
-     )}
-      <div className="text-left items-start pt-3 w-full p-4 ">
+      )}
+      <div className="w-full items-start p-4 pt-3 text-left ">
         <div className="flex items-center justify-between ">
           <p className="text-lg font-medium">{title}</p>
           <div className="flex items-center gap-5">
@@ -80,7 +80,7 @@ export default function ProjectCard({
                       width="24"
                       height="24"
                       src={skill}
-                      className="w-4 h-4 md:w-5 md:h-5 dark:invert opacity-40"
+                      className="h-4 w-4 opacity-40 dark:invert md:h-5 md:w-5"
                     />
                   ))}
                 </div>
@@ -92,28 +92,26 @@ export default function ProjectCard({
                   key={showcaseUrl}
                   className="rounded-full"
                   variant="outline"
-                  onClick={() => window.open(showcaseUrl, "_blank")}
+                  onClick={() => window.open(showcaseUrl, '_blank')}
                 >
-                  <ExternalLinkIcon className="w-4 h-4" />
+                  <ExternalLinkIcon className="h-4 w-4" />
                 </Button>
               )}
               {githubUrl && (
                 <Button
                   key={githubUrl}
-                  className="rounded-full relative"
+                  className="relative rounded-full"
                   variant="outline"
-                  onClick={() => window.open(githubUrl, "_blank")}
+                  onClick={() => window.open(githubUrl, '_blank')}
                 >
-                  <GitHubLogoIcon className="w-4 h-4" />
+                  <GitHubLogoIcon className="h-4 w-4" />
                   <span className="sr-only">Github link</span>
                 </Button>
               )}
             </div>
           </div>
         </div>
-        <p className="pt-2  text-sm text-muted-foreground">
-          {description}
-        </p>
+        <p className="pt-2  text-sm text-muted-foreground">{description}</p>
       </div>
     </motion.div>
   );
