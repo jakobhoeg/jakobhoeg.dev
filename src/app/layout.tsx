@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { AuroraBackground } from '@/components/ui/aurora-background';
+import { Analytics } from '@vercel/analytics/react';
 
 const metainfo = {
   name: 'Jakob Hoeg Mørk',
@@ -60,6 +61,7 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
         </AuroraBackground>
+        <Analytics />
       </body>
     </html>
   );
