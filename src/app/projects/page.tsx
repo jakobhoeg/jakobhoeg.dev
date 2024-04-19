@@ -2,6 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import ProjectCard from './components/project-card';
 import { Projects } from '@/lib/data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 export default function ProjectsPage() {
   return (
