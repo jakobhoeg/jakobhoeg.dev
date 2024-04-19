@@ -12,7 +12,7 @@ const metainfo = {
   icons: {
     icon: '/assets/logos/favicon-32x32.png',
   },
-  image: '/assets/metaimg.jpg',
+  image: 'https://jakobhoeg.dev/assets/metaimg.jpg',
 };
 
 export const metadata: Metadata = {
