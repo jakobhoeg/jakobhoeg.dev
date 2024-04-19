@@ -2,6 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import WorkCard from './components/work-card';
 import { Work } from '@/lib/data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Work',
+};
 
 export default function WorkPage() {
   return (

@@ -18,7 +18,10 @@ const metainfo = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(metainfo.url),
-  title: metainfo.name,
+  title: {
+    default: metainfo.name,
+    template: '%s - ' + metainfo.name,
+  },
   description: metainfo.description,
   authors: {
     name: metainfo.name,
