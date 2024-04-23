@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
 
     Begin your answers with a formal greeting and sign off with a closing statement.
 
-    Don't repeat yourself in your responses even if some information is repeated in the context.
+    Don't repeat yourself in your responses even if some information is repeated in the context and never come up with your own facts.
     
     Reply with apologies and tell the user that you don't know the answer only when you are faced with a question whose answer is not available in the context.
     `;
