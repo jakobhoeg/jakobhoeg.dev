@@ -23,26 +23,19 @@ const ratelimit = new Ratelimit({
 
 const convertVercelMessageToLangChainMessage = (message: VercelChatMessage) => {
   if (message.role === 'user') {
-    console.log('User message:', message.content);
     return new HumanMessage(message.content);
   } else if (message.role === 'assistant') {
-    console.log('AI message:', message.content);
     return new AIMessage(message.content);
   } else {
-    console.log('Chat message:', message.content);
     return new ChatMessage(message.content, message.role);
   }
 };
 
 export async function POST(req: NextRequest) {
   try {
-    console.log('Request received.');
-
     const ip = req.ip ?? '127.0.0.1';
-    console.log('IP:', ip);
 
     const { success } = await ratelimit.limit(ip);
-    console.log('Rate limit success:', success);
 
     if (!success) {
       const textEncoder = new TextEncoder();
@@ -55,7 +48,6 @@ export async function POST(req: NextRequest) {
           controller.close();
         },
       });
-      console.log('Rate limit exceeded. Sending error response.');
       return new StreamingTextResponse(transformStream);
     }
 
@@ -65,18 +57,14 @@ export async function POST(req: NextRequest) {
       (message: VercelChatMessage) =>
         message.role === 'user' || message.role === 'assistant',
     );
-    console.log('Filtered messages:', messages);
 
     const returnIntermediateSteps = false;
-    console.log('Return intermediate steps:', returnIntermediateSteps);
 
     const previousMessages = messages
       .slice(0, -1)
       .map(convertVercelMessageToLangChainMessage);
-    console.log('Previous messages:', previousMessages);
 
     const currentMessageContent = messages[messages.length - 1].content;
-    console.log('Current message content:', currentMessageContent);
 
     const chatModel = new ChatOpenAI({
       modelName: 'gpt-3.5-turbo-1106',
@@ -98,7 +86,6 @@ export async function POST(req: NextRequest) {
       },
       verbose: false,
     });
-    console.log('Vector store and retriever created.');
 
     /**
      * Wrap the retriever in a tool to present it to the agent in a
@@ -108,7 +95,6 @@ export async function POST(req: NextRequest) {
       name: 'search_latest_knowledge',
       description: 'Searches and returns up-to-date general information.',
     });
-    console.log('Retriever tool created.');
 
     const AGENT_SYSTEM_TEMPLATE = `
     You are an artificial intelligence chat bot that can provide information only about Jakob. Jakob is the owner of this website. 
@@ -132,7 +118,6 @@ export async function POST(req: NextRequest) {
       tools: [tool],
       prompt,
     });
-    console.log('OpenAI agent created.');
 
     const agentExecutor = new AgentExecutor({
       agent,
@@ -140,7 +125,6 @@ export async function POST(req: NextRequest) {
       // Set this if you want to receive all intermediate steps in the output of .invoke().
       returnIntermediateSteps,
     });
-    console.log('Agent executor created.');
 
     if (!returnIntermediateSteps) {
       /**
@@ -159,7 +143,6 @@ export async function POST(req: NextRequest) {
         input: currentMessageContent,
         chat_history: previousMessages,
       });
-      console.log('Log stream created.');
 
       const textEncoder = new TextEncoder();
       const transformStream = new ReadableStream({
@@ -172,7 +155,6 @@ export async function POST(req: NextRequest) {
                 typeof addOp.value === 'string' &&
                 addOp.value.length
               ) {
-                console.log('Streamed chunk:', addOp.value);
                 controller.enqueue(textEncoder.encode(addOp.value));
               }
             }
@@ -180,7 +162,6 @@ export async function POST(req: NextRequest) {
           controller.close();
         },
       });
-      console.log('Transform stream created.');
 
       return new StreamingTextResponse(transformStream);
     } else {
@@ -193,12 +174,10 @@ export async function POST(req: NextRequest) {
         input: currentMessageContent,
         chat_history: previousMessages,
       });
-      console.log('Agent invocation result:', result);
 
       const urls = JSON.parse(
         `[${result.intermediateSteps[0]?.observation.replaceAll('}\n\n{', '}, {')}]`,
       ).map((source: { url: any }) => source.url);
-      console.log('Parsed URLs:', urls);
 
       return NextResponse.json(
         {

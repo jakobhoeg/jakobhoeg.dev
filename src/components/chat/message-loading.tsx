@@ -7,7 +7,7 @@ const MessageLoading: React.FC = () => {
     <article
       className={cx(
         'mb-2 flex items-center gap-4 rounded-2xl p-4 md:p-5',
-        'bg-emerald-50/80',
+        'bg-muted',
       )}
     >
       <Avatar />
@@ -18,7 +18,7 @@ const MessageLoading: React.FC = () => {
         height="24"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-emerald-800"
+        className="text-foreground"
       >
         <circle cx="4" cy="12" r="2" fill="currentColor">
           <animate

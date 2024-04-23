@@ -1,6 +1,10 @@
 import { ComponentProps, forwardRef } from 'react';
 import cx from '@/utils/cx';
-import { ArrowLeftIcon } from '@radix-ui/react-icons';
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  PaperPlaneIcon,
+} from '@radix-ui/react-icons';
 
 export interface Props extends ComponentProps<'form'> {
   inputProps: ComponentProps<'input'>;
@@ -9,21 +13,15 @@ export interface Props extends ComponentProps<'form'> {
 
 const Form = ({ inputProps, buttonProps, onSubmit }: Props, ref: any) => {
   return (
-    <form
-      onSubmit={onSubmit}
-      className="relative m-auto flex items-center justify-center gap-4"
-      ref={ref}
-    >
-      {/*<Avatar isUser={true} className="md:size-10 bg-gray-300" />*/}
-
+    <form onSubmit={onSubmit} className="relative flex w-full" ref={ref}>
       <input
         placeholder="Your question..."
         required
         {...inputProps}
         className={cx(
           'h-10 flex-1 rounded-xl pl-4 pr-12 transition md:h-12',
-          'border border-gray-400 text-base',
-          'disabled:bg-gray-100',
+          'border border-neutral-400 text-sm dark:border-neutral-600',
+          'disabled:bg-neutral-100 dark:disabled:bg-neutral-800',
           inputProps.className,
         )}
         type="text"
@@ -38,7 +36,7 @@ const Form = ({ inputProps, buttonProps, onSubmit }: Props, ref: any) => {
           'opacity-50',
         )}
       >
-        <ArrowLeftIcon className="h-6 w-6" />
+        <PaperPlaneIcon className="h-5 w-5" />
       </button>
     </form>
   );
