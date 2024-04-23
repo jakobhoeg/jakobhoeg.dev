@@ -33,9 +33,10 @@ export default function ChatBubble() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{
-              opacity: { duration: 0.01 },
+              opacity: { duration: 0.1 },
               layout: {
                 type: 'spring',
+                duration: 0.5,
                 bounce: 0.05,
               },
             }}
@@ -53,9 +54,10 @@ export default function ChatBubble() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{
-              opacity: { duration: 0.01 },
+              opacity: { duration: 0.1 },
               layout: {
                 type: 'spring',
+                duration: 0.5,
                 bounce: 0.05,
               },
             }}
