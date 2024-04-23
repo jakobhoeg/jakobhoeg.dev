@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { Analytics } from '@vercel/analytics/react';
+import ChatBubble from '@/components/chat/chat-bubble';
 
 const metainfo = {
   name: 'Jakob Hoeg Mørk',
@@ -46,6 +47,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,6 +68,7 @@ export default function RootLayout({
               <Navbar />
               <main className="flex flex-1 flex-col pb-20 pt-32 md:pt-40">
                 {children}
+                <ChatBubble />
               </main>
             </div>
           </ThemeProvider>

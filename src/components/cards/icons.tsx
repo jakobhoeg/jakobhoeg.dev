@@ -79,7 +79,7 @@ export default function IconsCard() {
       whileHover={{ scale: 1.025 }}
       className="relative col-span-5 col-start-1 row-start-3 flex justify-center overflow-hidden rounded-xl bg-white/75 p-4 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10 md:col-span-2 md:col-start-6 md:row-start-1 md:h-40"
     >
-      <div className="absolute bottom-3 z-50 flex w-3/4 justify-center rounded-full border-t border-zinc-900 border-opacity-10 bg-white/60 py-1.5 backdrop-blur-sm dark:border-white/5 dark:bg-muted/60 md:bottom-1.5 md:text-sm">
+      <div className="absolute bottom-3 z-30 flex w-3/4 justify-center rounded-full border-t border-zinc-900 border-opacity-10 bg-white/60 py-1.5 backdrop-blur-sm dark:border-white/5 dark:bg-muted/60 md:bottom-1.5 md:text-sm">
         <p>Favourite tech</p>
       </div>
       <motion.div className=" flex h-full w-full flex-wrap justify-between sm:gap-2 ">

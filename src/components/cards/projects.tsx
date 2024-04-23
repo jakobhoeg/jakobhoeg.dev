@@ -95,7 +95,7 @@ export default function ProjectsCard() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-3  z-50 flex w-3/4 justify-center rounded-full border-t border-zinc-900 border-opacity-10 bg-white/60 py-1.5 backdrop-blur-sm dark:border-white/5 dark:bg-muted/60 md:text-sm">
+        <div className="absolute bottom-3  z-30 flex w-3/4 justify-center rounded-full border-t border-zinc-900 border-opacity-10 bg-white/60 py-1.5 backdrop-blur-sm dark:border-white/5 dark:bg-muted/60 md:text-sm">
           <p>My projects</p>
         </div>
       </Carousel>
