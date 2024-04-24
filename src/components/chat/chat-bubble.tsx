@@ -24,7 +24,7 @@ export default function ChatBubble() {
   return (
     <AnimatePresence>
       <div
-        className={`fixed ${showChat ? 'bottom-0 right-0' : 'bottom-3 right-3'}  z-[40] rounded-full md:bottom-14 md:right-16 md:max-h-full`}
+        className={`fixed ${showChat ? 'bottom-0 right-0' : 'bottom-3 right-3'}  z-[40] rounded-full md:bottom-8 md:right-10 md:max-h-full`}
       >
         {showChat ? (
           <motion.div
@@ -61,10 +61,10 @@ export default function ChatBubble() {
                 bounce: 0.05,
               },
             }}
-            className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-white shadow-md dark:bg-card"
+            className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-sky-400 shadow-md dark:bg-neutral-700 "
             onClick={handleClick}
           >
-            <BotMessageSquare className="relative h-6 w-6" />
+            <BotMessageSquare className="relative h-6 w-6 text-white" />
             {unreadMessages > 0 && (
               <div className="absolute right-0 top-0 flex h-6 w-6 animate-bounce items-center justify-center rounded-full border border-zinc-900 border-opacity-5 bg-red-500/80 backdrop-blur">
                 <p className="text-xs text-white">
