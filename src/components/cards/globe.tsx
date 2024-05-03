@@ -6,6 +6,9 @@ import * as React from 'react';
 import { useSpring } from 'react-spring';
 import { motion } from 'framer-motion';
 import { GlobeIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import Image from 'next/image';
+import { Skeleton } from '../ui/skeleton';
+import SpotifyPlaying from '../spotify-playing';
 
 export function GlobeCard() {
   const { resolvedTheme } = useTheme();
@@ -107,6 +110,9 @@ export function GlobeCard() {
               })}
           </p>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 z-20 w-full p-2">
+        <SpotifyPlaying />
       </div>
       <div className="absolute -inset-x-10 bottom-[-80%] mx-auto aspect-square h-[175%] md:inset-x-10">
         <div className="flex h-full w-full">
