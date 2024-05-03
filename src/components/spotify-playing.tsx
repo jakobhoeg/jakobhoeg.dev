@@ -45,6 +45,13 @@ export default function SpotifyPlaying() {
         });
 
         setLoading(false);
+      } else {
+        setCachedData({
+          song: null,
+          timestamp: 0,
+        });
+
+        setLoading(false);
       }
 
       setLoading(false);
