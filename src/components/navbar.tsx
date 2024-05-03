@@ -22,7 +22,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed inset-x-4 top-7 z-40 mx-auto flex max-w-3xl items-center justify-between gap-2 overflow-hidden rounded-full border border-zinc-900 border-opacity-5 bg-white/25 px-7 py-4 text-sm ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100  backdrop-blur dark:border-white/5 dark:bg-muted/50 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10 sm:gap-8">
+    <nav className="fixed inset-x-4 top-7 z-40 mx-auto flex max-w-3xl items-center justify-between gap-2 overflow-hidden rounded-full border border-zinc-900 border-opacity-5 bg-white/25 px-7 py-4 text-sm ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100  backdrop-blur dark:border-white/5 dark:bg-muted/50 dark:ring-neutral-400/10 dark:ring-offset-neutral-400/10 sm:gap-8">
       <ul className="items-center/50 flex items-center ">
         <Link href="/" className="flex-shrink-0 pr-4">
           <Image

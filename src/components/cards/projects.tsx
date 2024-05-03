@@ -68,7 +68,7 @@ export default function ProjectsCard() {
   return (
     <motion.div
       whileHover={{ scale: 1.025 }}
-      className="relative col-span-9 col-start-1 row-span-1 row-start-2 flex h-full  cursor-pointer gap-6 overflow-hidden rounded-xl bg-white/75 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10 md:col-span-3 md:col-start-5 md:row-start-2 md:h-40"
+      className="relative col-span-9 col-start-1 row-span-1 row-start-2 flex h-full  cursor-pointer gap-6 overflow-hidden rounded-xl bg-white/75 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-400/10 dark:ring-offset-neutral-400/10 md:col-span-3 md:col-start-5 md:row-start-2 md:h-40"
       onClick={() => router.push('/projects')}
     >
       <Carousel

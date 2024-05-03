@@ -30,6 +30,10 @@ export default function SpotifyPlaying() {
       const song = await res.json();
 
       if (song.status !== 200) {
+        setCachedData({
+          song: null,
+          timestamp: 0,
+        });
         setLoading(false);
         return;
       }
@@ -93,7 +97,7 @@ export default function SpotifyPlaying() {
 
       {/* If song is not playing */}
       {song === null && !loading && (
-        <div className="flex flex-col truncate">
+        <div className="flex flex-col -space-y-0.5 truncate">
           <p className="text-xs font-semibold">Currently not</p>
           <p className="text-xs">listening to music</p>
         </div>

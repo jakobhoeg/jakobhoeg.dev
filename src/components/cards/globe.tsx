@@ -86,7 +86,7 @@ export function GlobeCard() {
   return (
     <motion.div
       whileHover={{ scale: 1.025 }}
-      className="relative col-span-5  col-start-5 row-span-1 row-start-1 gap-6 overflow-hidden rounded-xl bg-white/75 p-4 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10 md:col-span-3 md:col-start-3 md:row-span-1"
+      className="relative col-span-5  col-start-5 row-span-1 row-start-1 gap-6 overflow-hidden rounded-xl bg-white/75 p-4 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-400/10 dark:ring-offset-neutral-400/10 md:col-span-3 md:col-start-3 md:row-span-1"
     >
       <div className="flex flex-col gap-1">
         <div className="z-10 flex items-center gap-2">
