@@ -47,7 +47,7 @@ export default function ProjectCard({
     <motion.div
       ref={videoRef}
       whileHover={{ scale: 1.025 }}
-      className="relative w-full overflow-hidden rounded-xl bg-white/75 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-950/10 dark:ring-offset-neutral-950/10"
+      className="relative w-full overflow-hidden rounded-xl bg-white/75 ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:bg-muted/80 dark:ring-neutral-400/10 dark:ring-offset-neutral-400/10"
     >
       {load ? (
         <video
