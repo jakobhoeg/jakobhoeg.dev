@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       <p className="prose dark:prose-invert">
         This is a list of some of the projects I&apos;ve worked on. You can find
         more on my{' '}
-        <Link href="/github" className="font-semibold">
+        <Link href="https://github.com/jakobhoeg" className="font-semibold">
           GitHub
         </Link>
         .
