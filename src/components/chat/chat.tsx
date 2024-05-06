@@ -65,8 +65,8 @@ If you have any questions about Jakob, feel free to ask me. If theres anything I
   );
 
   return (
-    <div className="relative mx-auto flex max-w-md flex-col p-4 sm:h-full md:p-6">
-      <div className="max-h-[350px] w-full overflow-y-auto text-sm">
+    <div className="relative mx-auto flex h-full flex-col p-4 sm:max-w-md md:p-6">
+      <div className="h-full w-full overflow-y-auto text-sm sm:max-h-[350px]">
         {messages.map((message: MessageProps) => {
           return <Message key={message.id} {...message} />;
         })}

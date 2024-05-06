@@ -24,7 +24,7 @@ export default function ChatBubble() {
   return (
     <AnimatePresence>
       <div
-        className={`fixed ${showChat ? 'bottom-0 right-0' : 'bottom-3 right-3'}  z-[40] rounded-full md:bottom-8 md:right-10 md:max-h-full`}
+        className={`fixed ${showChat ? 'bottom-0 right-0' : 'bottom-3 right-3'}  z-[40] sm:rounded-full md:bottom-8 md:right-10 md:max-h-full`}
       >
         {showChat ? (
           <motion.div
@@ -40,7 +40,7 @@ export default function ChatBubble() {
                 bounce: 0.05,
               },
             }}
-            className="h-full rounded-lg border bg-background p-4 shadow-md dark:bg-card"
+            className="h-[calc(100dvh)] bg-background p-4 shadow-2xl dark:bg-card sm:h-full sm:rounded-lg sm:border"
           >
             <div className="flex w-full justify-end " onClick={handleClick}>
               <ChevronDownIcon className="h-5 w-5 cursor-pointer" />
@@ -61,7 +61,7 @@ export default function ChatBubble() {
                 bounce: 0.05,
               },
             }}
-            className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-sky-400 shadow-md dark:bg-neutral-700 "
+            className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-sky-400 shadow-2xl dark:bg-neutral-700 "
             onClick={handleClick}
           >
             <BotMessageSquare className="relative h-6 w-6 text-white" />
