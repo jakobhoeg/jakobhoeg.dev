@@ -112,7 +112,7 @@ export function GlobeCard() {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 z-20 w-full p-2">
-        <SpotifyPlaying />
+        {/* <SpotifyPlaying /> */}
       </div>
       <div className="absolute -inset-x-10 bottom-[-80%] mx-auto aspect-square h-[175%] md:inset-x-10">
         <div className="flex h-full w-full">
