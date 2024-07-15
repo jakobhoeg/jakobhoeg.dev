@@ -90,7 +90,7 @@ export default function ProjectCard({
               {showcaseUrl && (
                 <Button
                   key={showcaseUrl}
-                  className="rounded-full"
+                  className="rounded-full dark:bg-muted-foreground/10"
                   variant="outline"
                   onClick={() => window.open(showcaseUrl, '_blank')}
                 >
@@ -100,7 +100,7 @@ export default function ProjectCard({
               {githubUrl && (
                 <Button
                   key={githubUrl}
-                  className="relative rounded-full"
+                  className="relative rounded-full dark:bg-muted-foreground/10"
                   variant="outline"
                   onClick={() => window.open(githubUrl, '_blank')}
                 >

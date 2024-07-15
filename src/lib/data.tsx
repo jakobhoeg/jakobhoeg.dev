@@ -11,6 +11,12 @@ export const Work: WorkCardProps[] = [
       "I'm currently contracting for Google where I've been collaborating on external frameworks with the Google Chrome team. I helped experiment with multi-platform large language model serving, including utilizing local LLMs, browser WebGPU models and hosted/server models.",
     type: 'Contracting',
     timeframe: 'Mar 2024 - Present',
+    links: {
+      linkedin: [
+        'https://www.linkedin.com/posts/addyosmani_softwareengineering-programming-ai-activity-7194771495204626432-9_9r?utm_source=share&utm_medium=member_desktop',
+        'https://www.linkedin.com/posts/addyosmani_ai-opensource-softwareengineering-activity-7204528186519429120-FX5D?utm_source=share&utm_medium=member_desktop',
+      ]
+    },
   },
   {
     id: 2,
@@ -39,6 +45,20 @@ export const Work: WorkCardProps[] = [
 export const Projects: ProjectCardProps[] = [
   {
     id: 1,
+    title: 'Chatty',
+    description: 'Private AI that leverages WebGPU to run large language models (LLMs) natively & privately in the browser. This ensures your data never leaves your device and enables offline access. Also has the ability to upload and ask questions about files.',
+    videoUrl: 'https://utfs.io/f/4c1e925b-a2c6-4b23-a46a-4f3bf94661d9-ow3q0d.mp4',
+    videoAlt: 'Chatty',
+    showcaseUrl: 'https://chattyui.com',
+    githubUrl: 'https://github.com/addyosmani/chatty',
+    skills: [
+      '/assets/icons/nextdotjs.svg',
+      '/assets/icons/typescript.svg',
+      '/assets/icons/tailwindcss.svg',
+    ],
+  },
+  {
+    id: 2,
     title: 'Proglio',
     description:
       'A full-stack collaborative task management platform coded in React with NextJS, MongoDB & TypeScript.',
@@ -54,7 +74,7 @@ export const Projects: ProjectCardProps[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Web app for Ollama LLMs',
     description:
       'Open source web interface for Ollama. Run open-source large language models (LLMs) locally on your pc. The web interface is coded in React with NextJS & TypeScript.',
@@ -69,7 +89,7 @@ export const Projects: ProjectCardProps[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'shadcn-chat',
     description:
       'Open source chat components for NextJS. Built on top of the very popular UI library, shadcn.',
@@ -85,7 +105,7 @@ export const Projects: ProjectCardProps[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Unity Game',
     description:
       'A 2D rougelike, bullet hell top-down game created in Unity Game Engine, coded in C# and designed by me. (Still a WIP).',

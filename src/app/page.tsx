@@ -12,7 +12,7 @@ export default function Home() {
       <h1 className="text-xl font-medium">Hey there, curious 👋</h1>
       <p className="prose dark:prose-invert">
         I&apos;m an aspiring software developer located in Denmark and I love to
-        create better UX and DX - especially through OSS (Open Source Software).
+        help create better UX and DX - especially through OSS (Open Source Software).
         <br />
         Currently, I am contracting for{' '}
         <Link href="/work" className="font-semibold">

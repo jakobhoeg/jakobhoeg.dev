@@ -1,15 +1,11 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
 import {
-  ExternalLinkIcon,
-  GitHubLogoIcon,
   LinkedInLogoIcon,
 } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { Skeleton } from '@/components/ui/skeleton';
 import { WorkCardProps } from '@/lib/types';
 
 export default function WorkCard({
@@ -21,6 +17,7 @@ export default function WorkCard({
   logoSrc,
   location,
   timeframe,
+  links,
 }: WorkCardProps) {
   return (
     <motion.div
@@ -40,12 +37,31 @@ export default function WorkCard({
         </div>
 
         <div className="flex flex-col  gap-1.5">
-          <div className="flex flex-col ">
-            <h1 className="text-base font-semibold md:text-lg">{title}</h1>
-            <p className="text-sm">{company + ' • ' + type}</p>
-            <p className="text-xs text-neutral-600 dark:text-neutral-300">
-              {location}
-            </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-base font-semibold md:text-lg">{title}</h1>
+              <p className="text-sm">{company + ' • ' + type}</p>
+              <p className="text-xs text-neutral-600 dark:text-neutral-300">
+                {location}
+              </p>
+            </div>
+            {links && (
+              <div className="flex gap-2">
+                {links.linkedin && (
+                  links.linkedin.map((link, index) => (
+                    <Button
+                      key={index}
+                      onClick={() => window.open(link, '_blank')}
+                      variant='outline'
+                      size='icon'
+                      className='rounded-full dark:bg-muted-foreground/10'
+                    >
+                      <LinkedInLogoIcon className='w-4 h-4 ' />
+                    </Button>
+                  ))
+                )}
+              </div>
+            )}
           </div>
           <p className="prose text-sm dark:text-white">{description}</p>
         </div>

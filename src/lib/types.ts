@@ -7,6 +7,9 @@ export interface WorkCardProps {
   type: string;
   location?: string;
   timeframe: string;
+  links?: {
+    linkedin?: string[];
+  };
 }
 
 export interface ProjectCardProps {
