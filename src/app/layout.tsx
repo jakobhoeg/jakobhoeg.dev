@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { Analytics } from '@vercel/analytics/react';
-import ChatBubble from '@/components/chat/chat-bubble';
+import ChatSupport from '@/components/chat/chat-support';
 
 const metainfo = {
   name: 'Jakob Hoeg Mørk',
@@ -68,7 +68,7 @@ export default function RootLayout({
               <Navbar />
               <main className="flex flex-1 flex-col pb-20 pt-32 md:pt-40">
                 {children}
-                <ChatBubble />
+                <ChatSupport />
               </main>
             </div>
           </ThemeProvider>
